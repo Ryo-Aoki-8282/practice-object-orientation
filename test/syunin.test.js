@@ -1,0 +1,9 @@
+import { Syunin } from "../src/syain.js";
+import { describe, it } from "@jest/globals";
+
+describe("Syuninクラスのテスト", () => {
+  it("基本給の計算を実行する", () => {
+    const syunin = new Syunin();
+    expect(syunin.calcSalary(100)).toBe(201);
+  })
+});
