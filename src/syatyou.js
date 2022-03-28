@@ -1,10 +1,9 @@
-import { Tantou, Syunin, Butyou } from "./syain.js";
+import { SyainFactory } from "./syain_factory.js";
 
-let syain = new Tantou();
-// let syunin = new Syunin();
-// let butyou = new Butyou();
-
-syain.kiritu();
-syain.calcSalary(100);
-// syunin.kiritu();
-// butyou.kiritu();
+let syainFactory = new SyainFactory()
+let positionNames = ["Tantou", "Syunin", "Butyou", "Torishimariyaku"]
+for (const positionName of positionNames) {
+  let syain = syainFactory.create(positionName, 100)
+  console.log(syain.kiritu());
+  console.log(syain.calcSalary());
+}
